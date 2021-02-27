@@ -18,8 +18,8 @@ export class AccountComponent {
 
   onSetTo(status: string) {
     this.accountService.updateAccount(this.id,status)
-    console.log('A server status changed, new status: ' + status);
-    this._loggingService.loggingMsg(status);
+    //console.log('A server status changed, new status: ' + status);
+    //this._loggingService.loggingMsg(status);
     //const service = new LoggingService;
     //console.log(service.loggingMsg(status))
   }
