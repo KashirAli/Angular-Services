@@ -11,7 +11,9 @@ import {LoggingService} from '../logging.service';
 export class NewAccountComponent {
  
 
-  constructor(private _loggingService:LoggingService, private accountService:AccountService){}
+  constructor(private _loggingService:LoggingService, private accountService:AccountService){
+    this.accountService.updateStatus.subscribe((status:string)=>alert(status));
+  }
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountService.addAccount(accountName,accountStatus);
